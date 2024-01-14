@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityOfBacoor Roleplay</title>
+    <meta property="og:title" content="CityOfBacoor Roleplay">
+    <meta property="og:description" content="Welcome to CityOfBacoor Roleplay, a Filipino GTA V SA:MP Server that supports both Mobile and Computer. Join us and support each other.">
+    <meta property="og:image" content="Embed.png">
+    <meta property="og:url" content="https://cityofbacoorroleplay--discordbot16.repl.co/">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+</head>
+
+<body>
+    <header>
+        <img src="background.jpg" width="300px" height="270" alt="Loading...">
+        <h1>CityOfBacoor Roleplay</h1>
+        <div class="menu-icon" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#official">Information</a>
+        <a href="#events">Events</a>
+        <a href="#team">Community</a>
+        <a href="#shop">Contacts</a>
+        <a href="#donate-us">Donate Us</a>
+        <a href="#contact">Credits</a>
+    </nav>
+
+    <section id="official">
+        <h2>Information</h2>
+        <p>Welcome to CityOfBacoor Roleplay, a Filipino GTA V SA:MP Server that supports both Mobile and Computer. Join us and support each other.</p>
+    </section>
+
+    <section id="events">
+        <h2>Events</h2>
+        <p>Stay tuned for our roleplay events, and don't forget our upcoming events so you don't miss out!</p>
+        <b>Current Event(s):</b>
+        <p>(none)</p>
+        <b>Coming Event(s):</b>
+        <p>(none)</p>
+    </section>
+
+    <section id="team">
+        <h2>Community</h2>
+        <p>Welcome to CityOfBacoor, a Filipino GTA V Roleplay Mobile and Computer community that supports every language.</p>
+        <b>Discord Community (Main)</b>
+        <a href="https://discord.com/invite/KKTPX569ha">https://discord.com/cityofbacoorrp</a>
+        <b>Facebook Page</b>
+        <b>Reddit Community</b>
+        <b>Twitter Page</b>
+    </section>
+
+    <section id="shop">
+        <h2>Contacts</h2>
+        <p>Contact us on our official <a href="#">Discord Server</a></p>
+        <b>Additional details:</b>
+        <p>Gmail: cityofbacoor@gmail.com</p>
+        <p>No. 63+ Not Available</p>
+    </section>
+
+    <section id="donate-us">
+        <h2>Donate Us</h2>
+        <p>Your support helps us improve our services and provide better experiences for our community. Feel free to contribute to our cause!
+        </p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="09065349345">
+            <input type="image" src="https://cdn.discordapp.com/attachments/1189492244844130445/1190099170258845787/Paypal.png?ex=65a09139&is=658e1c39&hm=96f1707f3fbfb174aa32cc1a92b1a1adf7f11895a121f078f0cf3eb1e0d39417&"
+                border="0" name="submit" width="200px" height="60" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="09065349345">
+            <input type="image" src="https://cdn.discordapp.com/attachments/1189492244844130445/1190105351677280317/20231229_093129_0000.png?ex=65a096fa&is=658e21fa&hm=aebb4d76162e9312cdef368177fd69e34ee62a8ef5390bcf944bfd6ab32cb5e4&"
+                border="0" name="submit" width="150px" height="40" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Credits</h2>
+        <p>Owner = <a href="https://discord.com/invite/KKTPX569">aTagsdesign</a></p>
+        <p>Web Developer = <a href="https://discord.com/invite/KKTPX569">SSG</a></p>
+        <p><a href="https://discord.com/invite/KKTPX569ha">Discord Community</a></p>
+        <section id="like-dislike-section">
+            <h2>Like and Dislike</h2>
+            <div class="button-container">
+                <div class="like-button" onclick="like()">
+                    <img src="background.jpg" alt="Like" width="20" height="20">
+                    <span id="like-count">0</span>
+                </div>
+                <div class="dislike-button" onclick="dislike()">
+                    <img src="background.jpg" alt="Dislike" width="20" height="20">
+                    <span id="dislike-count">0</span>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="copyright">
+        <footer>
+            <p>&copy; Copyright | CityOfBacoor Roleplay</p>
+        </footer>
+    </section>
+    <script src="script.js"></script>

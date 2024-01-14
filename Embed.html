@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Embed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #embed-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #embed-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #embed-description {
+            margin-bottom: 15px;
+        }
+
+        #embed-link {
+            color: #Ffe498;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="embed-container">
+        <div id="embed-title">CityofBacoor roleplay</div>
+        <div id="embed-description">CityOfBacoor Roleplay Website
+        </div>
+        <a id="embed-link" href="#" target="_blank"></a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the link from the query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const link = urlParams.get('link');
+
+            // Display the link in the embed
+            const embedLink = document.getElementById('embed-link');
+            embedLink.textContent = link;
+            embedLink.href = link;
+        });
+    </script>
+</body>
+
+</html>
