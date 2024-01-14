@@ -32,6 +32,9 @@
         header img {
             border-radius: 50%;
             transition: transform 0.3s;
+            width: 100%;
+            max-width: 200px; /* Adjust the max-width as needed */
+            height: auto;
         }
 
         header img:hover {
@@ -101,29 +104,39 @@
             position: relative;
             z-index: 2;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s;
+            transition: transform 0.3s;
         }
 
         footer:hover {
-            background-color: #444;
-            transform: translateY(-5px);
+            background-color: #555;
+            transform: scale(1.02);
         }
 
-        /* Add any additional styles or modifications here */
+        .splash {
+            position: absolute;
+            background: url('images.jpeg') no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
     </style>
 </head>
 
 <body>
     <header>
-        <img src="background.jpg" width="300px" height="270" alt="Loading...">
+        <img src="background.jpg" alt="Loading...">
         <h1>CityOfBacoor Roleplay</h1>
         <div class="menu-icon" onclick="toggleNav()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-    </header>
+        </header>
 
     <nav>
         <a href="#official">Information</a>
