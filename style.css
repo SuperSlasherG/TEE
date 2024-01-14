@@ -23,6 +23,7 @@ header {
     padding: 1em;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
+    transform: translateY(0);
 }
 
 h1 {
@@ -51,11 +52,12 @@ nav a {
     padding: 14px 16px;
     text-decoration: none;
     margin: 0 10px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
     background-color: #333;
+    transform: scale(1.1);
 }
 
 /* Section styles */
@@ -65,13 +67,14 @@ section {
     background-color: #fff; /* Change background color to white */
     border-radius: 20px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, transform 0.5s ease-in-out, box-shadow 0.3s;
+    transition: background-color 0.3s, transform 0.5s ease-in-out, box-shadow 0.3s, color 0.3s;
     transform: translateY(0);
     cursor: pointer;
 }
 
 section:hover {
     box-shadow: 0 16px 32px rgba(173, 216, 230, 0.8);
+    transform: scale(1.02);
 }
 
 /* Additional style to separate sections */
@@ -86,7 +89,7 @@ footer {
     text-align: center;
     padding: 2em;
     width: 100%;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     border-radius: 8px;
     position: relative;
     z-index: 2;
@@ -94,6 +97,7 @@ footer {
 
 footer:hover {
     background-color: #555;
+    transform: translateY(-10px);
 }
 
 /* Add this CSS for the water splash effect */
@@ -106,7 +110,8 @@ footer:hover {
     z-index: 999;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, transform 0.5s ease-in-out;
+    transform: scale(1.1);
 }
 
 /* JavaScript to add a class when scrolling for the header animation */
