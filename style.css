@@ -7,12 +7,12 @@ body, h1, h2, p {
 
 body {
     font-family: 'Raleway', sans-serif;
-    background: url('background.jpg') center top/300% fixed;
+    background: url('background.jpg') center top/cover fixed;
     margin: 0;
     padding-top: 80px;
     height: 100%;
     position: relative;
-    background-color: #ffe08a;
+    background-color: #ccc; /* Change background color to grey */
     transition: background-color 0.3s;
 }
 
@@ -62,7 +62,7 @@ nav a:hover {
 section {
     padding: 30px;
     margin: 30px;
-    background-color: rgba(128, 128, 128, 0.9);
+    background-color: #fff; /* Change background color to white */
     border-radius: 20px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.5s ease-in-out, box-shadow 0.3s;
