@@ -37,7 +37,7 @@ h1 {
 nav {
     background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
-    position: fixed; /* Fixed position to stay at the top */
+    position: relative; /* Back to relative position */
     width: 100%;
     z-index: 1000; /* Higher z-index to stay on top */
     transition: all 0.5s;
@@ -90,28 +90,30 @@ section {
     position: relative;
     overflow: hidden;
     color: #fff; /* Lighten section text color */
-}
 
-section:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(45deg, #222 0px, #222 10px, #333 10px, #333 20px); /* Texture */
-    mix-blend-mode: overlay;
-    opacity: 0.1;
-}
+    /* Hover effect styles */
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(45deg, #222 0px, #222 10px, #333 10px, #333 20px); /* Texture */
+        mix-blend-mode: overlay;
+        opacity: 0.1;
+    }
 
-section:hover {
-    box-shadow: 0 32px 64px rgba(255, 223, 0, 0.9);
-    transform: translateY(-15px);
-}
+    /* Additional style to separate sections with extravagance */
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
 
-/* Additional style to separate sections with extravagance */
-section:not(:last-child) {
-    margin-bottom: 40px;
+    /* Initial hover effect */
+    &:hover {
+        box-shadow: 0 32px 64px rgba(255, 223, 0, 0.9);
+        transform: translateY(-15px);
+    }
 }
 
 /* Footer styles exuding richness */
