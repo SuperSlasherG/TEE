@@ -37,8 +37,9 @@ h1 {
 nav {
     background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
-    position: absolute;
-    height: 120px;
+    position: fixed; /* Fixed position to stay visible during scrolling */
+    width: 100%;
+    z-index: 1000; /* Higher z-index to stay on top */
     transition: all 0.5s;
 }
 
@@ -52,7 +53,6 @@ nav a {
     margin: 0 20px;
     transition: all 0.5s;
     position: relative;
-    z-index: 1;
 }
 
 nav a:before {
@@ -75,7 +75,6 @@ nav a:hover:before {
 nav a:hover {
     background-color: #1a1a1a;
     transform: scale(1.2);
-    z-index: 2;
 }
 
 /* Section styles with a touch of extravagance */
@@ -147,4 +146,15 @@ footer:hover {
 window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
     header.classList.toggle("scrolled", window.scrollY > 0);
+});
+
+/* Smooth scrolling effect for internal links */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
