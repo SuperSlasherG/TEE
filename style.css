@@ -1,52 +1,52 @@
-/* Reset styles with a touch of opulence */
+/* Reset styles */
 body, h1, h2, p {
     margin: 0;
     padding: 0;
-    transition: all 0.5s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
-    font-family: 'Playfair Display', serif;
-    background: linear-gradient(to right, #6441A5, #2a0845); /* Gradient background */
+    font-family: 'Raleway', sans-serif;
+    background: url('background.jpg') center top/cover fixed;
     margin: 0;
-    padding-top: 150px;
+    padding-top: 80px;
     height: 100%;
     position: relative;
-    background-color: #2d2d2d; /* Deep, mysterious background color */
-    transition: all 0.5s;
-    color: #fff; /* Default text color */
+    background-color: #ccc; /* Change background color to grey */
+    transition: background-color 0.3s;
 }
 
-/* Header styles elevated to grandeur */
+/* Header styles */
 header {
-    background-color: rgba(32, 32, 32, 0.9);
-    color: gold;
-    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1em;
     text-align: center;
-    transition: all 0.5s;
+    transition: background-color 0.3s;
 }
 
 h1 {
-    font-size: 4em;
-    font-weight: bolder;
-    text-shadow: 3px 3px 6px rgba(255, 223, 0, 0.5);
-    transition: all 0.5s;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: font-size 0.3s, color 0.3s;
 }
 
-/* Navigation styles transformed into a visual spectacle */
+/* Navigation styles */
 nav {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(128, 128, 128, 0.7);
     overflow: hidden;
-    position: relative; /* Back to relative position */
-    width: 100%;
-    z-index: 1000; /* Higher z-index to stay on top */
-    transition: all 0.5s;
+    position: slider-horizontal;
+    height: 80px;
+    transition: background-color 0.3s, transform 0.5s ease-in-out;
+    transform-origin: top right;
+    transform: translateY(0);
 }
 
 nav a {
     float: left;
     display: block;
-    color: #007BFF; /* Blue link color */
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -59,7 +59,7 @@ nav a:hover {
     transform: scale(1.1); /* Add scale effect on hover */
 }
 
-/* Section styles with a touch of extravagance and water splash effect */
+/* Section styles */
 section {
     padding: 30px;
     margin: 30px;
@@ -69,52 +69,22 @@ section {
     transition: background-color 0.3s, transform 0.5s ease-in-out, box-shadow 0.3s, color 0.3s;
     transform: translateY(0);
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-
-    /* Hover effect styles */
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: repeating-linear-gradient(45deg, #222 0px, #222 10px, #333 10px, #333 20px); /* Texture */
-        mix-blend-mode: overlay;
-        opacity: 0.1;
-    }
-
-    /* Additional style to separate sections with extravagance */
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
-
-    /* Initial hover effect */
-    &:hover {
-        box-shadow: 0 16px 32px rgba(173, 216, 230, 0.8);
-        transform: translateY(-5px); /* Lift the section on hover */
-    }
-
-    /* Make text unselectable */
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-
-    /* Clickable text */
-    p {
-        color: #007BFF; /* Blue link color */
-        text-decoration: none;
-        cursor: pointer;
-        user-select: none;
-    }
 }
 
-/* Footer styles exuding richness */
+section:hover {
+    box-shadow: 0 16px 32px rgba(173, 216, 230, 0.8);
+    transform: translateY(-5px); /* Lift the section on hover */
+}
+
+/* Additional style to separate sections */
+section:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
 footer {
-    background-color: rgba(32, 32, 32, 0.5);
-    color: gold;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     text-align: center;
     padding: 2em;
     width: 100%;
