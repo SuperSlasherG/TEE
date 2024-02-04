@@ -99,12 +99,6 @@ section {
         transform: translateY(-5px); /* Lift the section on hover */
     }
 
-    /* Make text unselectable */
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-
     /* Clickable text */
     p {
         color: #007BFF; /* Blue link color */
