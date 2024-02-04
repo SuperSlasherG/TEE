@@ -71,7 +71,7 @@ section {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.5s ease-in-out, box-shadow 0.3s, color 0.3s;
     transform: translateY(0);
-    cursor: pointer;
+    cursor: default; /* Set cursor to default */
     position: relative;
     overflow: hidden;
 
@@ -106,7 +106,7 @@ section {
     -ms-user-select: none;
 
     /* Clickable text */
-    a {
+    p {
         color: #007BFF; /* Blue link color */
         text-decoration: none;
         pointer-events: auto;
