@@ -46,7 +46,7 @@ nav {
 nav a {
     float: left;
     display: block;
-    color: grey; /* Grey link color */
+    color: #007BFF; /* Blue link color */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -107,7 +107,7 @@ section {
 
     /* Clickable text */
     a {
-        color: inherit;
+        color: #007BFF; /* Blue link color */
         text-decoration: none;
         pointer-events: auto;
         user-select: none;
