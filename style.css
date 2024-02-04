@@ -52,9 +52,7 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    position: relative;
     user-select: none; /* Disable text selection */
-    pointer-events: auto; /* Enable click events */
 }
 
 nav a:hover {
@@ -103,8 +101,7 @@ section {
     p {
         color: #007BFF; /* Blue link color */
         text-decoration: none;
-        pointer-events: auto;
-        user-select: none;
+        cursor: pointer;
     }
 }
 
