@@ -112,7 +112,6 @@ section {
     /* Initial hover effect */
     &:hover {
         box-shadow: 0 32px 64px rgba(255, 223, 0, 0.9);
-        transform: translateY(-15px);
     }
 }
 
