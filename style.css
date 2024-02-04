@@ -48,50 +48,32 @@ nav a {
     display: block;
     color: grey; /* Grey link color */
     text-align: center;
-    padding: 24px 32px;
+    padding: 14px 16px;
     text-decoration: none;
-    margin: 0 20px;
-    transition: all 0.5s;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
     position: relative;
     user-select: none; /* Disable text selection */
     pointer-events: auto; /* Enable click events */
 }
 
-nav a:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 0.3s;
-}
-
-nav a:hover:before {
-    opacity: 0; /* No hover effect */
-}
-
 nav a:hover {
-    background-color: #1a1a1a;
-    transform: scale(1); /* No hover effect */
-    animation: none; /* No glowing animation on hover */
+    background-color: #333;
+    transform: scale(1.1); /* Add scale effect on hover */
 }
 
-/* Section styles with a touch of extravagance */
+/* Section styles with a touch of extravagance and water splash effect */
 section {
-    padding: 60px;
-    margin: 60px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 40px;
-    box-shadow: 0 24px 48px rgba(255, 223, 0, 0.7);
-    transition: all 0.5s;
+    padding: 30px;
+    margin: 30px;
+    background-color: rgba(128, 128, 128, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.5s ease-in-out, box-shadow 0.3s, color 0.3s;
+    transform: translateY(0);
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    color: #fff; /* Lighten section text color */
 
     /* Hover effect styles */
     &:before {
@@ -108,12 +90,13 @@ section {
 
     /* Additional style to separate sections with extravagance */
     &:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     /* Initial hover effect */
     &:hover {
-        box-shadow: 0 32px 64px rgba(255, 223, 0, 0.9);
+        box-shadow: 0 16px 32px rgba(173, 216, 230, 0.8);
+        transform: translateY(-5px); /* Lift the section on hover */
     }
 
     /* Make text unselectable */
@@ -128,28 +111,34 @@ footer {
     background-color: rgba(32, 32, 32, 0.5);
     color: gold;
     text-align: center;
-    padding: 4em;
+    padding: 2em;
     width: 100%;
-    transition: all 0.5s;
-    border-radius: 16px;
+    transition: background-color 0.3s;
+    border-radius: 8px;
     position: relative;
     z-index: 2;
 }
 
 footer:hover {
-    background-color: #2d2d2d;
+    background-color: #555;
 }
 
-/* A lavish splash effect for the ultimate wow factor */
+/* Add this CSS for the water splash effect */
 .splash {
-    position: fixed;
-    background: linear-gradient(to right, #6441A5, #2a0845); /* Gradient background */
+    position: absolute;
+    background: url('images.jpeg') no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
-    z-index: 9999;
+    z-index: 999;
     pointer-events: none;
     opacity: 0;
-    transition: all 0.5s;
+    transition: opacity 0.3s, transform 0.5s ease-in-out;
+    transform-origin: center;
 }
 
-/* JavaScript for an extravagant header
+/* JavaScript to add a class when scrolling for the header animation */
+window.addEventListener("scroll", function () {
+    var header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 0);
+});
